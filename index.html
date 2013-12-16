@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Elosztott modell tranformáció</title>
+
+		<meta name="description" content="Elosztott modell tranformáció beszámoló 2013 ősz">
+		<meta name="author" content="Michelberger Tamás">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1 style="line-height: 135px">Elosztott modell transzformáció</h1>
+					<h3>Michelberger Tamás</h3>
+					<p>
+						Konzulens: Mezei Gergely
+					</p>
+				</section>
+				<section>
+					<h1>Modell transzformáció</h1>
+				</section>
+				<section>
+					<h1>modell = gráf</h1>
+					<h3>modell transzformáció = gráf transzformáció</h3>
+					<h3>minta keresés = izomorf részgráf keresés</h3>
+				</section>
+				<section>
+					<h1>Miért elosztott?</h1>
+				</section>
+				<section>
+					<p>A modellek túl nagyra nőhetnek.</p>
+					<p>Egy gép csak limitáltan skálázódik.</p>
+				</section>
+				<section>
+					<h1>Hogyan lesz elosztott?</h1>
+				</section>
+				<section>
+					<h3>Hogyan lesz elosztott?</h3>
+					<ul>
+						<li>gráf particionálás (probléma felvágása)</li>
+						<li>partíciók kiosztása az egyes gépek között</li>
+						<li>minták keresése, bevonva akár több gépet is</li>
+						<li>transzformációs lépések végrehajtása</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Gráf particionálás</h1>
+				</section>
+				<section>
+					<h3>Három lépés</h3>
+					<ol>
+						<li>coarsening: a gráf csomópontjainak <br>számának csökkentése</li>
+						<li>particionálás</li>
+						<li>uncoarsening és finomítás</li>
+					</ol>
+				</section>
+				<section>
+					<h1>Implementáció</h1>
+				</section>
+				<section>
+					<h3>Célok</h3>
+					<ul>
+						<li>Minél modulárisabb felépítés.</li>
+						<li>Pluginnek előtérbe helyezése.</li>
+						<li>Interfész és implementáció<br>teljes szétválasztása.</li>
+					</ul>
+				</section>
+				<section>
+					<h1>További tervek</h1>
+				</section>
+				<section>
+					<h3>További tervek</h3>
+					<ul>
+						<li>Gráf particionálás már kész.</li>
+						<li>Elsődleges feladat a mintakeresés <br> és a transzformáció megvalósítása.</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Köszönöm a figyelmet!</h1>
+					<h3>Kérdések?</h3>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
